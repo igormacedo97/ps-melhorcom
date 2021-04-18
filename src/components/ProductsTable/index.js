@@ -2,7 +2,6 @@ import Button from '../Button';
 
 import { Header, Container, Table } from './styles';
 
-import cellphoneIcon from '../../assets/cellphone.svg';
 
 import ProductRow from '../ProductRow';
 
@@ -13,7 +12,7 @@ export default function ProductsTable(){
     <Container>
     <Header>
       <h2>Produtos</h2>
-      <Button />
+      <Button isAddButton />
     </Header>
 
     <Table>

@@ -24,6 +24,10 @@ export const StyledButton = styled.button `
     span {
       color: #DAE3ED;
     }
+
+    img {
+      filter: brightness(800%)
+    }
   }
 
 `;
