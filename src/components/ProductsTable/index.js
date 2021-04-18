@@ -1,14 +1,22 @@
 import Button from '../Button';
-import * as styles from './styles';
+
+import { Header, Container, Table } from './styles';
+
+import cellphoneIcon from '../../assets/cellphone.svg';
+
+import ProductRow from '../ProductRow';
+
+const styles = {};
 
 export default function ProductsTable(){
   return (
-    <div style={styles.container}>
-    <header style={styles.header}>
+    <Container>
+    <Header>
       <h2>Produtos</h2>
       <Button />
-    </header>    
-    <table>
+    </Header>
+
+    <Table>
       <thead>
         <tr>
           <th>Código</th>
@@ -22,27 +30,32 @@ export default function ProductsTable(){
       </thead>
 
       <tbody>
-        <tr>
-          <td>00000001</td>
-          <td>Redmi 4k</td>
-          <td>R$ 1000.00</td>
-          <td>Xiaomi</td>
-          <td>Preto</td>
-          <td />
-          <td />
-        </tr>
+        <ProductRow
+          code="0000001"
+          model="XT2041-1"
+          price={1407.12}
+          brand="Motorola"
+          color="BLACK"
+        />
 
-        <tr>
-          <td>00000002</td>
-          <td>Moto G5</td>
-          <td>R$ 1200.00</td>
-          <td>Motorola</td>
-          <td>Branco</td>
-          <td />
-          <td />
-        </tr>
+        <ProductRow
+          code="0000001"
+          model="XT2041-1"
+          price={1407.12}
+          brand="Motorola"
+          color="BLACK"
+        />
+
+        <ProductRow
+          code="0000001"
+          model="XT2041-1"
+          price={1407.12}
+          brand="Motorola"
+          color="BLACK"
+        />
+        
       </tbody>
-    </table>
-  </div>
+    </Table>
+  </Container>
   )
 }

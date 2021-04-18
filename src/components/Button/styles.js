@@ -1,19 +1,30 @@
-export const container = {
-  height: 40,
-  backgroundColor: '#DAE3ED',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  paddingLeft: 16,
-  paddingRight: 16,
+import styled from 'styled-components';
 
-  borderRadius: 5,
-  borderWidth: 1, 
-  borderColor: '#1D1D1D'
-}
+export const StyledButton = styled.button `
+  height: 40px;
+  background-color: #DAE3ED;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #1D1D1D;
+  border-radius: 5px;
 
-export const innerText = {
-  textTransform: 'uppercase',
-  color: '#1D1D1D',
-  fontSize: 12,
-}
+  transition: all ease 0.2s;
+
+  cursor: pointer;
+
+  span {
+    color: #1D1D1D;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: #1D1D1D;
+
+    span {
+      color: #DAE3ED;
+    }
+  }
+
+`;
+

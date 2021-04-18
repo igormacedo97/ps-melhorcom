@@ -1,17 +1,24 @@
+import styled from 'styled-components';
+
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 
+const Container = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  `;
 
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <Container>
       <Header />
       <Main />
       <Footer />
-    </div>
+    </Container> 
+   
   );
 }
 
