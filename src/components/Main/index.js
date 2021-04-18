@@ -1,3 +1,11 @@
+import ProductsTable from '../ProductsTable'
+
+import * as styles from './styles'
+
 export default function Main(){
-  return <div /> 
+  return (
+    <main style={styles.container}>
+      <ProductsTable />
+    </main>
+  )
 }
