@@ -1,11 +1,11 @@
-import ProductsTable from '../ProductsTable'
+
 
 import { Container } from './styles'
 
-export default function Main(){
+export default function Main({children}){
   return (
     <Container>
-      <ProductsTable />
+      { children }
     </Container>
   )
 }
