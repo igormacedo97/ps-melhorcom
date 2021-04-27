@@ -1,27 +1,35 @@
-import styled from 'styled-components';
+import React, { useEffect, useState } from 'react';
 
-import Header from '../components/Header';
+
 import Main from '../components/Main';
-import Footer from '../components/Footer';
 
 import ProductsTable from '../components/ProductsTable'
 
-const Container = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  `;
+import apiClient from '../services/api';
+
+
 
 
 export default function Home() {
+  const [products, setProducts] = useState([]);
+
+  const getProducts = async () => {
+    try {
+      const response = await apiClient.get('/');
+      setProducts(response.data);
+    } catch (err) {
+      setProducts([]);
+    }
+  }
+
+  useEffect(() => {
+    getProducts();
+  }, [])
+
   return (
-    <Container>
-      <Header />
-      <Main>
-        <ProductsTable />
-      </Main>
-      <Footer />
-    </Container>    
+    <Main>
+      <ProductsTable products={products} />
+    </Main>
   );
 }
 

@@ -13,6 +13,11 @@ export const GlobalStyle = createGlobalStyle`
     height: 100vh;
   }
 
+  div#root {
+    display: flex;
+    flex-direction: column;
+  }
+
   body {
     font-family: Arial, Helvetica, sans-serif
   }
